@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="C:\DevC++\Vince\QuadroFFAReceiptSystem\Quadro.css" />
+  </head>
+  <body>
+  
+    <div class="wrapper">
+      <form action="#">
+        <h2>Welcome to Quadro FFA</h2>
+        <div class="input-field">
+          <input type="text" required />
+          <label>Enter your email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" required />
+          <label>Enter your password</label>
+        </div>
+        <div class="forget">
+          <label for="remember">
+            <input type="checkbox" id="remember" />
+            <p>Remember me</p>
+          </label>
+          <a href="#" id="forgotPassword">Forgot password?</a>
+        </div>
+        <button type="submit">Log In</button>
+        <div class="register">
+          <p>Don't have an account? <a href="#" id="registerLink">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    
+    <div id="signupSection" class="hidden">
+      <h2>Sign Up</h2>
+      <form action="#">
+        <div class="input-field">
+          <input type="text" required />
+          <label>Enter your name</label>
+        </div>
+        <div class="input-field">
+          <input type="email" required />
+          <label>Enter your email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" required />
+          <label>Create a password</label>
+        </div>
+        <button type="submit">Sign Up</button>
+        <div class="register">
+          <p>Already have an account? <a href="#" id="loginLink">Log In</a></p>
+        </div>
+      </form>
+    </div>
+
+ 
+    <div id="forgotPasswordSection" class="hidden">
+      <h2>Forgot Password</h2>
+      <form action="#">
+        <div class="input-field">
+          <input type="email" required />
+          <label>Enter your email</label>
+        </div>
+        <button type="submit">Reset Password</button>
+        <div class="register">
+          <p>Remember your password? <a href="#" id="backToLogin">Log In</a></p>
+        </div>
+      </form>
+    </div>
+
+    <script src="C:\DevC++\Vince\QuadroFFAReceiptSystem\Quadro.js"></script>
+  </body>
+</html>
