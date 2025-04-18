@@ -1,8 +1,7 @@
 <?php
 session_start();
-include 'connect.php'; // Include the database connection file
+include 'connect.php'; 
 
-// Check if the user is already logged in
 if (isset($_SESSION['user_id'])) {
     echo "<p>Welcome, " . htmlspecialchars($_SESSION['username']) . "! <a href='logout.php'>Logout</a></p>";
 }
@@ -11,10 +10,11 @@ if (isset($_SESSION['user_id'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Form</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
 </head>
 <body>
 
@@ -24,11 +24,11 @@ if (isset($_SESSION['user_id'])) {
             <h2>Welcome to Quadro FFA</h2>
             <div class="input-field">
                 <input type="email" name="email" required />
-                <label>Enter your email</label>
+                <label>Enter your Email</label>
             </div>
             <div class="input-field">
                 <input type="password" name="password" required />
-                <label>Enter your password</label>
+                <label>Enter your Password</label>
             </div>
             <button type="submit">Log In</button>
             <div class="register">
@@ -38,43 +38,48 @@ if (isset($_SESSION['user_id'])) {
     </div>
 
     <!-- Sign Up Form -->
-    <div id="signupSection" class="hidden">
-        <h2>Sign Up</h2>
-        <form action="register.php" method="POST">
-            <div class="input-field">
-                <input type="text" name="name" required />
-                <label>Enter your name</label>
-            </div>
-            <div class="input-field">
-                <input type="email" name="email" required />
-                <label>Enter your email</label>
-            </div>
-            <div class="input-field">
-                <input type="password" name="password" required />
-                <label>Create a password</label>
-            </div>
-            <button type="submit">Sign Up</button>
-            <div class="register">
-                <p>Already have an account? <a href="#" id="loginLink">Log In</a></p>
-            </div>
-        </form>
-    </div>
+<div id="signupSection" class="hidden">
+  <div class="wrapper">
+    <h2>Sign Up</h2>
+    <form action="register.php" method="POST">
+      <div class="input-field">
+        <input type="text" name="name" required />
+        <label>Enter your Name</label>
+      </div>
+      <div class="input-field">
+        <input type="email" name="email" required />
+        <label>Enter your Email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" name="password" required />
+        <label>Create a Password</label>
+      </div>
+      <button type="submit">Sign Up</button>
+      <div class="register">
+        <p>Already have an account? <a href="#" id="loginLink">Log In</a></p>
+      </div>
+    </form>
+  </div>
+</div>
 
-    <!-- Forgot Password Form -->
-    <div id="forgotPasswordSection" class="hidden">
-        <h2>Forgot Password</h2>
-        <form action="forgot_password.php" method="POST">
-            <div class="input-field">
-                <input type="email" name="email" required />
-                <label>Enter your email</label>
-            </div>
-            <button type="submit">Reset Password</button>
-            <div class="register">
-                <p>Remember your password? <a href="#" id="backToLogin">Log In</a></p>
-            </div>
-        </form>
-    </div>
+<!-- Forgot Password Form -->
+<div id="forgotPasswordSection" class="hidden">
+  <div class="wrapper">
+    <h2>Forgot Password</h2>
+    <form action="forgot_password.php" method="POST">
+      <div class="input-field">
+        <input type="email" name="email" required />
+        <label>Enter your Email</label>
+      </div>
+      <button type="submit">Reset Password</button>
+      <div class="register">
+        <p>Remember your password? <a href="#" id="backToLogin">Log In</a></p>
+      </div>
+    </form>
+  </div>
+</div>
 
-    <script src="script.js"></script>
+
+    <script src="login.js"></script>
 </body>
 </html>
